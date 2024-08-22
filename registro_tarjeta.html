@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Formulario de Tarjeta de Crédito Dinámico</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style_tarjeta.css">
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+<body>
+	<header class="cabecera_pagina">
+		<div class="container--flex">
+			<div class="header__container">
+				<h2 class="titulo_principal">Registrate para comprar</h2>
+<!----------------------------------------Menu principal--------------------------------------------->
+			<span class="menu_principal_boton" id="boton_Menu"><i class="fas fa-bars"></i></span>
+			<nav class="navegador">
+			<ul class="menu" id="menu">
+			</li>
+			<li class="menu__posicion"><a href="index.html" class="menu__link"><i class="fa-brands fa-windows"></i> Inicio</a></li>
+			<li class="menu__posicion"><a href="ofertas.html" class="menu__link"><i class="fa-solid fa-dumpster-fire"></i> Ofertas</a></li>
+			<li class="container-submenu menu__posicion">
+						<a href="nosotros.html" class="menu__link submenu-btn" ><i class="fa-brands fa-hive"></i> Nosotros </a>
+					<li class="menu__posicion"><a href="nosotros.html" class="menu__link"><i class="fa-solid fa-handshake-simple"></i> Ayuda</a></li>
+					<li class="menu__posicion"><a href="contactos.html" class="menu__link"><i class="fa-solid fa-clipboard-user"></i> Contacto</a></li>
+					<li class="menu__posicion"><a href="https://drive.google.com/file/d/1MmUa-rLW5m8PZhWRzMcIEHqM6KYM96TU/view?usp=drivesdk" download="" class="menu__link"><i class="fa fa-download" aria-hidden="true"></i> Descargar lista</a></li>
+				</ul>
+			</nav>
+			</div>
+<!----------------------------------------Icono iniciar sesion+modal---------------------------------------->
+			
+			<div class="header__container">
+				<input type="search" class="header__input" placeholder="Buscar productos...">
+				<p class="lupa"><i class="fa-solid fa-magnifying-glass" class="lupa"></i></p>
+				<a href="registro_tarjeta.html" class="boton_compras">Compras<i class="fas fa-shopping-cart"></i></a>
+			</div>
+		</div>
+	</header><br>
+
+	<!------------------------------Tarjeta-------------------------------------->
+	<div class="contenedor">
+		<section class="tarjeta" id="tarjeta">
+		<div class="delantera">
+			<div class="logo-marca">
+				<img src="img/logos/visa.png" alt="">
+			</div>
+			<img src="img/chip-tarjeta.png" class="chip" alt="">
+			<div class="datos">
+				<div class="grupo" id="numero">
+					<p class="label">Numero Tarjeta</p>
+					<p class="numero">#### #### ### ####</p>
+				</div>
+				<div class="flexbox">
+					<div class="grupo" id="nombre">
+						<p class="label">Nombre tarjeta</p>
+						<p class="nombre">Jhon Doe</p>
+					</div>
+					<div class="grupo" id="expiracion">
+						<p class="label">Expiracion</p>
+						<p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="trasera">
+			<div class="barra-magnetica"></div>
+			<div class="datos">
+				<div class="grupo" id="firma">
+					<p class="label">Firma</p>
+					<div class="firma"><p>Alex</p></div>
+				</div>
+				<div class="grupo" id="ccv">
+					<p class="label">CCV</p>
+					<p class="ccv"></p>
+				</div>	
+			</div>
+			<p class="leyenda">lhoir sit le rnurv dcei</p>
+			<a href="#" class="link-banco">www.banco.com</a>
+		</div>
+		</section>
+		<!--Formulario x-->
+		<div class="contenedor-btn">
+			<button class="btn-abrir-formulario" id="btn-abrir-formulario">
+				<i class="fas fa-plus"></i>
+			</button>
+		</div>
+
+		<form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+			<div class="grupo">
+				<label for="inputNumero">Número Tarjeta</label>
+				<input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+			</div>
+			<div class="grupo">
+				<label for="inputNombre">Nombre</label>
+				<input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+			</div>
+			<div class="flexbox">
+				<div class="grupo expira">
+					<label for="selectMes">Expiracion</label>
+					<div class="flexbox">
+						<div class="grupo-select">
+							<select name="mes" id="selectMes">
+								<option disabled selected>Mes</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</div>
+						<div class="grupo-select">
+							<select name="year" id="selectYear">
+								<option disabled selected>Año</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</div>
+					</div>
+				</div>
+				<div class="grupo ccv">
+					<label for="inputCVV">CVV</label>
+					<input type="text" id="inputCVV" maxlength="3">
+				</div>
+			</div>
+			<button type="submit" class="btn-enviar">Enviar</button>
+		</form>
+	</div>
+
+	<!-----------------------------------Footer------------------------------------->
+
+  		<footer class="main-footer">
+  			<div class="footer__section">
+  				<h2 class="footer__title">Contactos</h2>
+  				<br>
+  				<p class="parrafo_footer"><a href="" class="red_social_footer"><i class="fa-brands fa-whatsapp tamaño_red"></i></a> 72525622</p>
+  				<p class="parrafo_footer"><i class="fas fa-mail-bulk"></i> alefrvg@gmail.com</p>
+  				<p class="parrafo_footer"><i class="fas fa-phone-alt"></i> 2481828</p>
+  				
+  			</div>
+  			<div class="footer__section">
+  				<h2 class="footer__title">Redes Sociales</h2>
+  				<div class="footer_redes_sociales">
+  					<br>
+		            <p class="parrafo_footer"><a href="" class="red_social">
+		            	<i class="fa-brands fa-facebook"></i></a> Dale like a nuestra página</p>
+		            <p class="parrafo_footer"><a href="" class="red_social">
+		            <i class="fa-brands fa-instagram icono_footer"></i></a> Siguenos en nuestras historias</p>
+		            
+		            <p class="parrafo_footer"><a href="" class="red_social">
+		            	<i class="fa-brands fa-youtube icono_footer"></i></a> Suscríbete para estar al día</p>
+		            <p class="parrafo_footer"><a href="" class="red_social">
+		            	<i class="fa-brands fa-tiktok icono_footer"></i></a> Comparte tus momentos</p>
+  				</div><br>
+  				
+  			</div>
+  			<div class="footer__section">
+  				<h2 class="footer__title">Enlaces</h2>
+  				<br>
+  				<a href="" class="footer__link">Comprar</a>
+  				<a href="" class="footer__link">Inicio</a>
+  				<a href="" class="footer__link">Registro</a>
+  				<a href="" class="footer__link">Lista de productos</a>
+  			</div>
+  			<div class="footer__section">
+  				
+<!-------------------------------Calificacion con estrellas------------------------------------>
+      <h2 class="footer__title">Calificanos</h2>
+  		
+      <div class="calificacion_estrella">
+          <h6>Calificacion con estrellas</h6>
+          <p class="card-title">Su calificación es de gran ayuda para mejorar nuestra página</p>
+           <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="1estrella"></span>
+           <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="2estrella"></span>
+           <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="3estrella"></span>
+           <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="4estrella"></span>
+           <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="5estrella"></span><br><br>
+		<a class="btn-shop" class="btn btn-primary" onclick="Mensaje()">CALIFICAR</a>
+       	</div>
+  			</div>
+  			<p class="copy">Copyright © 2022 Technology Store</p>
+  		</footer>
+
+
+
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<!--Script para formulario-->
+	<script>
+		const tarjeta = document.querySelector('#tarjeta'),
+			btnAbrirFormulario = document.querySelector('#btn-abrir-formulario'),
+			formulario = document.querySelector('#formulario-tarjeta');
+
+		tarjeta.addEventListener('click', () => {
+			tarjeta.classList.toggle('active');
+		});
+
+		btnAbrirFormulario.addEventListener('click', () => {
+			btnAbrirFormulario.classList.toggle('active');
+			formulario.classList.toggle('active');
+		});
+	</script>
+	<!----------------------------Script Calificacion con estrellas------------------------------------>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      var contador;
+      function calificar(item){
+        console.log(item);
+        contador=item.id[0];//captura 1er caracter
+        let nombre = item.id.substring(1);
+        for(let i=0; i<5; i++){
+          
+          if(i<contador){
+            document.getElementById((i+1)+nombre).style.color="orange";
+          }else{
+            document.getElementById((i+1)+nombre).style.color="white";
+          }
+        }
+      }
+
+      function Mensaje(){
+        alert("Gracias por calificar nos dio "+contador+" estrellas")
+      }
+    </script>
+	<script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

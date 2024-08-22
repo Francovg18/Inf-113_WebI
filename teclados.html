@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Monitores</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minium-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+<script>
+   function validar(){
+      var carnet, paterno, materno, nombre, correo, edad;
+      carnet = document.getElementById("carnet").value;
+      paterno = document.getElementById("paterno").value;
+      materno = document.getElementById("materno").value;
+      nombre = document.getElementById("nombre").value;
+      correo = document.getElementById("correo").value;
+      edad = document.getElementById("edad").value;
+      expresion1 = /[0-9]\s+[A-Z]/;
+      expresion2 = /^[a-zA-Z]/;
+      expresion3 = /^[1-9]\d$/;
+      expresion4 = /\w+@\w+\.+[a-z]/;
+
+      if(carnet == "" || paterno =="" || materno =="" || nombre =="" || correo=="" || edad ==""){
+         alert("Debe de llenar todos los campos");
+         return false;
+      }
+      else if (!expresion1.test(carnet)){
+         alert("El carnet no es valido");
+         return false;
+      }
+      else if (!expresion2.test(paterno)){
+         alert("Apellido paterno no valido");
+         return false;
+      }
+      else if (!expresion2.test(materno)){
+         alert("Apellido materno no valido");
+         return false;
+      }
+      else if (!expresion2.test(nombre)){
+         alert("Nombre no valido");
+         return false;
+      }
+      else if (!expresion4.test(correo)){
+         alert("Introduce un correo válido");
+         return false;
+      }
+      else if (!expresion3.test(edad)){
+         alert("Edad no valido");
+         return false;
+      }
+   }
+</script>	
+</head>
+<body>
+	<header class="cabecera_pagina">
+    <div class="container--flex">
+      <div class="header__container">
+        <h1 class="titulo_principal">Sección Teclados</h1>
+<!----------------------------------------Menu principal--------------------------------------------->
+          <span class="menu_principal_boton" id="boton_Menu"><i class="fas fa-bars"></i></span>
+          <nav class="navegador">
+            <ul class="menu" id="menu">
+            <li class="menu__posicion"><a href="index.html" class="menu__link"><i class="fa-brands fa-windows"></i> Inicio</a></li>
+      </li>
+      	<li class="menu__posicion"><a href="monitores.html" class="menu__link">Monitores</a></li>
+      	 <li class="menu__posicion"><a href="teclados.html" class="marcado menu__link">Teclados</a></li>
+     		 <li class="menu__posicion"><a href="auriculares.html" class="menu__link">Auriculares</a>
+          <li class="menu__posicion"><a href="mouse.html" class="menu__link">Mouse</a></li>
+          <li class="menu__posicion"><a href="cpu.html" class="menu__link">C.P.U.</a></li>
+          <li class="menu__posicion"><a href="sillas.html" class="menu__link">Sillas</a></li>
+          
+        </ul>
+      </nav>
+      </div>
+<!--------------------------------------Compras---------------------------------------->
+      
+      <div class="header__container">
+        <input type="search" class="header__input" placeholder="Buscar productos...">
+        <p class="lupa"><i class="fa-solid fa-magnifying-glass" class="lupa"></i></p>
+        <a href="registro_tarjeta.html" class="boton_compras">Compras<i class="fas fa-shopping-cart"></i></a>
+      </div>
+    </div>
+  </header><br>
+<!---------------------------------------Carrusel---------------------------------------------->
+
+  		<div class="container-carrusel">
+		<div class="carrusel" id="carrusel">
+			<div class="carrusel__section">
+				<img src="imagenesp/monitor2.jpg" alt="" class="carrusel__img">
+				<div class="carousel-caption d-none d-md-block">
+			      <h4>Monitores full HD</h4>
+			        <p class="textoc">Productos y accesorios de diferentes marcas para equipar tu casa</p>
+			        <a href="registro_tarjeta.html" class="btn-shop"><i class="fa-brands fa-cc-visa"></i> COMPRAR</a>
+			      </div>
+			</div>
+			<div class="carrusel__section">
+				<img src="imagenesp/monitor3.jpg" alt="" class="carrusel__img">
+			</div>
+			<div class="carrusel__section">
+				<img src="imagenesp/monitor4.jpg" alt="" class="carrusel__img"></div>
+			<div class="carrusel__section">
+				<img src="imagenesp/monitor5.jpg" alt="" class="carrusel__img"></div>
+			</div>
+		<div class="carrusel__btn carrusel__btn--right" id="btn-right">&#62;</div>
+		<div class="carrusel__btn carrusel__btn--left" id="btn-left">&#60;</div>
+		</div>
+<!------------------1ra Seccion de productos------------------------------------->
+
+  			<main class="main">
+  			<div class="container">
+  				<h2 class="main-title">Monitores Grandes</h2>
+  			<section class="container-products">
+  				<div class="producto1">
+  					<img src="imagenesp/monitor1.jpeg" alt="" class="product__img">
+  					<div class="product__description">
+  						<h3 class="product__title">Monitor LG</h3>
+  					  <span class="producto__price">
+  					  <!--------------------estrelllas productos------------------>	
+  					  <div class="btn-group">
+							<button class="btn btn-secondary btn-sm" type="button">
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star"></i>
+							    <i class="fas fa-star"></i>
+							    <i class="fas fa-star"></i>
+							  </button>
+							  <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+							  </button>
+							  <ul class="dropdown-menu">
+							    <p class="información_productos">Un monitor LG de 24" con una pantalla con un brillo excelente</p>
+							    <a href="" class="información_productos">Comprar</a>
+							  </ul>
+							</div>
+							<!-------------------------**------------------>	  
+							<br>$175.00</span>	
+  					</div>
+  					<i class="product__icon fas fa-cart-plus"></i>
+  				</div>
+  				<div class="producto1">
+  					<img src="imagenesp/monitor6.jpg" alt="" class="product__img">
+  					<div class="product__description">
+  						<h3 class="product__title">Monitor Samsung</h3>
+  					<span class="producto__price">
+  					<!--------------------estrelllas productos------------------>	
+  					  <div class="btn-group">
+							<button class="btn btn-secondary btn-sm" type="button">
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star"></i>
+							  </button>
+							  <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+							  </button>
+							  <ul class="dropdown-menu">
+							    <p class="información_productos">Una pantalla oled con las mejores imagenes hd</p>
+							    <a href="" class="información_productos">Comprar</a>
+							  </ul>
+							</div>
+							<!-------------------------**------------------>	  
+							<br>$794.00</span>	
+  					</div>
+  					<i class="product__icon fas fa-cart-plus"></i>
+  				</div>
+  				<div class="producto1">
+  					<img src="imagenesp/monitor7.jpg" alt="" class="product__img">
+  					<div class="product__description">
+  						<h3 class="product__title">Monitor LG 25"</h3>
+  					    <span class="producto__price">
+  					    <!--------------------estrelllas productos------------------>	
+  					  <div class="btn-group">
+							<button class="btn btn-secondary btn-sm" type="button">
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star"></i>
+							    <i class="fas fa-star"></i>
+							    <i class="fas fa-star"></i>
+							  </button>
+							  <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+							  </button>
+							  <ul class="dropdown-menu">
+							    <p class="información_productos">Un monitor con una pantalla acorde para los juegos y una experiencia limpia</p>
+							    <a href="" class="información_productos">Comprar</a>
+							  </ul>
+							</div>
+							<!-------------------------**------------------>	  
+							<br>$385.00</span>	
+  					</div>
+  				<i class="product__icon fas fa-cart-plus"></i>	
+  				</div>
+  				<div class="producto1">
+  					<img src="imagenesp/monitor8.WEBP" alt="" class="product__img">
+  					<div class="product__description">
+  						<h3 class="product__title">Monitor Sony</h3>
+  					    <span class="producto__price">
+						<!--------------------estrelllas productos------------------>	
+  					  <div class="btn-group">
+							<button class="btn btn-secondary btn-sm" type="button">
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star color_estrella"></i>
+							  </button>
+							  <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+							  </button>
+							  <ul class="dropdown-menu">
+							    <p class="información_productos">Un monitor con 48 pulgadas de tamaño e imagenes con la mejor calidad</p>
+							    <a href="" class="información_productos">Comprar</a>
+							  </ul>
+							</div>
+							<!-------------------------**------------------>	  
+							<br>$405.25</span>	
+  					</div>
+  					<i class="product__icon fas fa-cart-plus"></i>
+  				</div>
+  			</section>
+  			</div>
+<!------------------2da Seccion de productos------------------------------------->
+
+  			<div class="container">
+  			<h2 class="main-title">Monitores Medianos</h2>
+  			<section class="container-products">
+  				<div class="producto2">
+  					<img src="imagenesp/monitor9.WEBP" alt="" class="product__img">
+  					<div class="product__description">
+  						<h3 class="product__title">Monitor Acer</h3>
+  					    <span class="producto__price">
+  					    <!--------------------estrelllas productos------------------>	
+  					  <div class="btn-group">
+							<button class="btn btn-secondary btn-sm" type="button">
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star"></i>
+							    <i class="fas fa-star"></i>
+							    <i class="fas fa-star"></i>
+							  </button>
+							  <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+							  </button>
+							  <ul class="dropdown-menu">
+							    <p class="información_productos">Un monitor con una pantalla de 30 pulgadas con la mejor definicion</p>
+							    <a href="" class="información_productos">Comprar</a>
+							  </ul>
+							</div>
+							<!-------------------------**------------------>	  
+							<br>$315.00</span>	
+  					</div>
+  					<i class="product__icon fas fa-cart-plus"></i>
+  				</div>
+  				<div class="producto2">
+  					<img src="imagenesp/monitor10.jpg" alt="" class="product__img">
+  					<div class="product__description">
+  						<h3 class="product__title">Monitor Asus</h3>
+  					    <span class="producto__price">
+  					    <!--------------------estrelllas productos------------------>	
+  					  <div class="btn-group">
+							<button class="btn btn-secondary btn-sm" type="button">
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star"></i>
+							    <i class="fas fa-star"></i>
+							  </button>
+							  <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+							  </button>
+							  <ul class="dropdown-menu">
+							    <p class="información_productos">El mejor monitor de la marca Asus con un tamaño perfecto</p>
+							    <a href="" class="información_productos">Comprar</a>
+							  </ul>
+							</div>
+							<!-------------------------**------------------>	  
+							<br>$224.00</span>	
+  					</div>
+  					<i class="product__icon fas fa-cart-plus"></i>
+  				</div>
+  				<div class="producto2">
+  					<img src="imagenesp/monitor5.jpg" alt="" class="product__img">
+  					<div class="product__description">
+  						<h3 class="product__title">Monitor NEC</h3>
+  					    <span class="producto__price">
+  					    <!--------------------estrelllas productos------------------>	
+  					  <div class="btn-group">
+							<button class="btn btn-secondary btn-sm" type="button">
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star"></i>
+							    <i class="fas fa-star"></i>
+							  </button>
+							  <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+							  </button>
+							  <ul class="dropdown-menu">
+							    <p class="información_productos">Un monitor que te ofrece la mejor experiencia a corto precio</p>
+							    <a href="" class="información_productos">Comprar</a>
+							  </ul>
+							</div>
+							<!-------------------------**------------------>	  
+							<br>$425.00</span>	
+  					</div>
+  				<i class="product__icon fas fa-cart-plus"></i>	
+  				</div>
+  				<div class="producto2">
+  					<img src="imagenesp/monitor2.jpg" alt="" class="product__img">
+  					<div class="product__description">
+  						<h3 class="product__title">Monitor Dell</h3>
+  					    <span class="producto__price">
+  					    <!--------------------estrelllas productos------------------>	
+  					  <div class="btn-group">
+							<button class="btn btn-secondary btn-sm" type="button">
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star color_estrella"></i>
+							    <i class="fas fa-star"></i>
+							  </button>
+							  <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+							  </button>
+							  <ul class="dropdown-menu">
+							    <p class="información_productos">Llevate el monitor más grande del mercado</p>
+							    <a href="" class="información_productos">Comprar</a>
+							  </ul>
+							</div>
+							<!-------------------------**------------------>	  
+							<br>$245.25</span>	
+  					</div>
+  					<i class="product__icon fas fa-cart-plus"></i>
+  				</div>
+  			</section>
+  			</div>
+  		</main><br>
+<!-----------------------------------Footer------------------------------------->
+
+  		<footer class="main-footer">
+  			<div class="footer__section">
+  				<h2 class="footer__title">Contactos</h2>
+  				<br>
+  				<p class="parrafo_footer"><a href="https://wa.me/59169926193" class="red_social_footer"><i class="fa-brands fa-whatsapp tamaño_red"></i></a> 69926193</p>
+  				<p class="parrafo_footer"><i class="fas fa-mail-bulk"></i> alefrvg@gmail.com</p>
+  				<p class="parrafo_footer"><i class="fas fa-phone-alt"></i> 2481828</p>
+  				
+  			</div>
+  			<div class="footer__section">
+  				<h2 class="footer__title">Redes Sociales</h2>
+  				<div class="footer_redes_sociales">
+  					<br>
+		            <p class="parrafo_footer"><a href="https://es-la.facebook.com/" class="red_social">
+		            	<i class="fa-brands fa-facebook"></i></a> Dale like a nuestra página</p>
+		            <p class="parrafo_footer"><a href="https://www.instagram.com/" class="red_social">
+		            <i class="fa-brands fa-instagram icono_footer"></i></a> Siguenos en nuestras historias</p>
+		            
+		            <p class="parrafo_footer"><a href="https://www.youtube.com/" class="red_social">
+		            	<i class="fa-brands fa-youtube icono_footer"></i></a> Suscríbete para estar al día</p>
+		            <p class="parrafo_footer"><a href="https://www.tiktok.com/es/" class="red_social">
+		            	<i class="fa-brands fa-tiktok icono_footer"></i></a> Comparte tus momentos</p>
+  				</div><br>
+  				
+  			</div>
+  			<div class="footer__section">
+  				<h2 class="footer__title">Enlaces</h2>
+  				<br>
+  				<a href="registro_tarjeta.html" class="footer__link">Comprar</a>
+  				<a href="index.html" class="footer__link">Inicio</a>
+  				<a href="" class="footer__link">Registro</a>
+  				<a href="index.html" class="footer__link">Lista de productos</a>
+  			</div>
+  			<div class="footer__section">
+  				
+<!-------------------------------Calificacion con estrellas------------------------------------>
+      <h2 class="footer__title">Calificanos</h2>
+  		
+      <div class="calificacion_estrella">
+          <h6>Calificacion con estrellas</h6>
+          <p class="card-title">Su calificación es de gran ayuda para mejorar nuestra página</p>
+           <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="1estrella"></span>
+           <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="2estrella"></span>
+           <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="3estrella"></span>
+           <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="4estrella"></span>
+           <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="5estrella"></span><br><br>
+		<a class="btn-shop" class="btn btn-primary" onclick="Mensaje()">CALIFICAR</a>
+       	</div>
+  			</div>
+  			<p class="copy">Copyright © 2022 Technology Store</p>
+  		</footer>
+<!-------------------------------Modal------------------------------------>
+
+		<div class="modal fade" id="exampleModal" tabindex="-3" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+			<div class="modal-header">
+			<div class="container" id="formulario">      
+			<div class="registro">
+				<h2 class="texto_formulario">Datos del cliente</h2>
+				<form name ="formularioDatos"  method="post" onsubmit="return validar();">
+				<div class="form-group">       
+					<label>Carnet de identidad:</label>        
+				<div>            
+					<input type="text" id="carnet" class="form-control" placeholder="Ej: (12345678 LP)" name="c.i">        
+				</div>    
+				</div>
+				<div class="form-group">     
+					<label>Apellido paterno:</label>        
+				<div >      
+				<input TYPE="TEXT" id="paterno" class="form-control" placeholder="Paterno" name="Apellido"></div>    
+				</div>
+				<div class="form-group">     
+					<label>Apellido materno:</label>        
+				<div>      
+					<INPUT TYPE="TEXT" id="materno" class="form-control" placeholder="Materno" name="Apellido"></div>    
+				</div> 
+					<div class="form-group">     
+						<label>Nombres:</label>        
+					<div>      
+					<input TYPE="TEXT" id="nombre" class="form-control" placeholder="Nombres" name="nombre"></div>
+					</div>
+					<div class="form-group">     
+						<label>Correo electrónico:</label>        
+					<div>      
+					<input TYPE="TEXT" id="correo" class="form-control" placeholder="Ej: (nombre@gmail.com)" name="nombre"></div>
+					</div>
+					<div class="form-group">       
+						<label>Edad:</label>        
+					<div>            
+						<input type="text" id="edad" class="form-control" placeholder="Edad" name="edad">        
+					</div>    
+					</div>     
+
+					<div class="form-group">   
+					<div>         
+						<input type="submit" class="btn btn-primary btn-lg btn-block" value="enviar">   
+					</div>   
+					<div>      
+						<input type="reset" class="btn btn-danger btn-lg btn-block" value="limpiar">     </div> 
+					</div>
+			</form>
+			</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	</div>
+</div>
+<!---------------------------Script Menu------------------------------------->	
+
+	<script src="./js/bootstrap.bundle.min.js"></script>
+	<script>
+			const btnMenu = document.querySelector("#boton_Menu");
+			const menu = document.querySelector("#menu");
+			btnMenu.addEventListener("click", function(){
+				menu.classList.toggle("mostrar");
+			})
+
+			const subMenuBtn = document.querySelectorAll(".submenu-btn");
+			for(let i=0; i<subMenuBtn.length; i++) {
+				subMenuBtn[i].addEventListener("click", function(){
+					if(window.innerWidth < 1024){
+						const subMenu = this.nextElementSibling;
+						const height = subMenu.scrollHeight;
+						if(subMenu.classList.contains("desplegar")){
+							subMenu.classList.remove("desplegar");
+							subMenu.removeAttribute("style");
+						} else {
+							subMenu.classList.add("desplegar");
+							subMenu.style.height = height + "px";
+						}	
+					}
+				})
+			}
+	</script>
+<!----------------------------Script para carrusel------------------------------------->
+	<script>
+			const carrusel = document.querySelector("#carrusel");
+			let carruselSection = document.querySelectorAll(".carrusel__section");
+			let carruselSectionLast = carruselSection[carruselSection.length -1];
+
+			const btnLeft = document.querySelector("#btn-left");
+			const btnRight = document.querySelector("#btn-right");
+
+			carrusel.insertAdjacentElement('afterbegin', carruselSectionLast);
+
+			function Next() {
+				let carruselSectionFirst = document.querySelectorAll(".carrusel__section")[0];
+				carrusel.style.marginLeft = "-200%";
+				carrusel.style.transition = "all 0.5s";
+				setTimeout(function(){
+					carrusel.style.transition = "none";
+					carrusel.insertAdjacentElement('beforeend', carruselSectionFirst);
+					carrusel.style.marginLeft = "-100%";
+				}, 500);
+			}
+
+			function Prev() {
+				let carruselSection = document.querySelectorAll(".carrusel__section");
+				let carruselSectionLast = carruselSection[carruselSection.length -1];
+				carrusel.style.marginLeft ="0";
+				carrusel.style.transition = "all 0.5s";
+				setTimeout(function(){
+					carrusel.style.transition = "none";
+					carrusel.insertAdjacentElement('afterbegin', carruselSectionLast);
+					carrusel.style.marginLeft = "-100%";
+				}, 500);
+			}
+
+			btnRight.addEventListener('click', function(){
+				Next();
+			});
+			btnLeft.addEventListener('click', function(){
+				Prev();
+			});
+
+			setInterval(function(){
+				Next();
+
+			}, 15000);
+	</script>
+<!----------------------------Script Calificacion con estrellas------------------------------------>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      var contador;
+      function calificar(item){
+        console.log(item);
+        contador=item.id[0];//captura 1er caracter
+        let nombre = item.id.substring(1);
+        for(let i=0; i<5; i++){
+          
+          if(i<contador){
+            document.getElementById((i+1)+nombre).style.color="orange";
+          }else{
+            document.getElementById((i+1)+nombre).style.color="white";
+          }
+        }
+      }
+
+      function Mensaje(){
+        alert("Gracias por calificar nos dio "+contador+" estrellas")
+      }
+    </script>
+</body>
+</html>

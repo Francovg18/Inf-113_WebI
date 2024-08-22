@@ -1,10 +1,10 @@
-# Bootstrap 5 Admin Dashbaord Template
+# Pagina Web I con HTMl, CSS y JavaScript
 
-# 👉 Subscribe to My Channel [💙❤️Youtube❤️💙](https://www.youtube.com/channel/UCpOHt5d6GG-mvo-_pU06rhQ?sub_confirmation=1)
+# 👉 Codigo de la página
 
 ---
 
-## List of Components used in this Tutorial
+## Herramientas usadas:
 
 | Component Name  |                                          Docs                                          |
 | --------------- | :------------------------------------------------------------------------------------: |

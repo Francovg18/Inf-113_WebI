@@ -28,5 +28,5 @@ Para visualizar correctamente el proyecto, asegúrate de tener un navegador mode
 
 1. **Clona** este repositorio:
    ```bash
-   git clone https://github.com/tu_usuario/tu_repositorio.git
+   git clone https://github.com/tu_usuario/tu_repositorio.git](https://github.com/Francovg18/Inf-113_WebI
 
